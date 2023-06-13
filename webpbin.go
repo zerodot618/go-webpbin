@@ -3,6 +3,7 @@ package webpbin
 import (
 	"bytes"
 	"image"
+	"image/gif"
 	"image/png"
 	"io"
 	"io/ioutil"
@@ -147,6 +148,18 @@ func createReaderFromImage(img image.Image) (io.Reader, error) {
 
 	var buffer bytes.Buffer
 	err := enc.Encode(&buffer, img)
+
+	if err != nil {
+		return nil, err
+	}
+
+	return &buffer, nil
+}
+
+func createReaderFromGif(gifImg *gif.GIF) (io.Reader, error) {
+
+	var buffer bytes.Buffer
+	err := gif.EncodeAll(&buffer, gifImg)
 
 	if err != nil {
 		return nil, err
