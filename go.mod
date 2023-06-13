@@ -1,4 +1,4 @@
-module github.com/nickalie/go-webpbin
+module github.com/zerodot618/go-webpbin
 
 go 1.14
 
