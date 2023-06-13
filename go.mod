@@ -4,6 +4,7 @@ go 1.14
 
 require (
 	github.com/dsnet/compress v0.0.1 // indirect
+	github.com/frankban/quicktest v1.14.5 // indirect
 	github.com/golang/snappy v0.0.4 // indirect
 	github.com/mholt/archiver v3.1.1+incompatible // indirect
 	github.com/nickalie/go-binwrapper v0.0.0-20190114141239-525121d43c84
